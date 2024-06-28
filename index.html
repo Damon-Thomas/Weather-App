@@ -10,17 +10,39 @@
 </head>
 
 <body>
-    <form id="form">
-        <label class="input" for="city-input">
-            <span class="prompt">Location:</span>
-            <input type="text" class="city-input" id="city-input" name="city-input">
-            <span class="error" aria-live="polite"></span>
-        </label>
-        <button class="submit"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" 
-        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" 
-        class="feather feather-search"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" 
-        y2="16.65"></line></svg></button>
-    </form>
+    <div id="loader"></div>
+    <div id="main">
+        <form id="form">
+            <label class="input" for="city-input">
+                <span class="prompt">Location: <span class="error-prompt"></span></span>
+                <input type="text" class="city-input" id="city-input" name="city-input">
+                <span class="error" aria-live="polite"></span>
+            </label>
+            <button class="submit"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="feather feather-search"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65"
+            y2="16.65"></line></svg></button>
+        </form>
+        <div class="content">
+            <div class="location-content">
+                <div class="loc">
+                    <h1 class="city-content"></h1>
+                    <h2 class="country-content"></h2>
+                    <h3 class="time-content"></h3>
+                </div>
+                <div class="cur">
+                    <h2 class="current-content"></h2>
+                    <img class="icon-content">
+                </div>
+            </div>
+            <div class="weather-content">
+        
+                <h2 class="tempC-content"></h2>
+                <h2 class="tempF-content"></h2>
+                <h2 class="humidity-content"></h2>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>

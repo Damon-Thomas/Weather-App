@@ -19,16 +19,101 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 
+#loader {
+    display: none;
+    background-color: cadetblue;
+    opacity: .9;
+    /* z-index: 99; */
 
-body {
+}
+
+
+#main {
     min-height: 100vh;
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url("./img/steve-johnson-y3Ne7MbdQ1E-unsplash.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+#main.sunny {
+    background-image: url("./img/mick-haupt-OVX3oiL5PsE-unsplash.jpg")
+}
+
+#main.clear {
+    background-image: url("./img/mmmg123456-qxT5_usxqsE-unsplash.jpg")
+}
+
+#main.rain {
+    background-image: url("./img/nick-scheerbart-soGoAfesWO8-unsplash.jpg")
+}
+#main.cloud {
+    background-image: url("./img/nathan-anderson-f19Pxh_96CA-unsplash.jpg")
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    visibility: hidden;
+    margin: 2rem;
+}
+
+.location-content, .weather-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 1rem 10vw;
+    margin: 2rem;
+    background-color: lightslategray;
+    border-radius: 2rem;
+    line-height: 2;
+}
+
+.loc, .cur {
+    display: flex;
+    flex-direction: column;
+}
+
+.cur {
     justify-content: center;
+    align-items: center;
+}
+
+.cur > img {
+    height: 3rem;
+    width: 3rem;
+    border: none;
+}
+
+.current-content {
+    font-size: 1.5rem;
+    font-weight: 900;
+}
+
+
+
+.city-content {
+    font-size: 2rem;
+    font-weight: 900;
+}
+
+.country-content {
+    font-size: 1rem;
+    font-weight: 900;
+}
+
+.time-content {
+    font-size: 1rem;
+    font-weight: 400;
 }
 
 #form {
     position: relative;
     width: clamp(300px, 75vw, 90vw);
+    height: 5.5rem;
     margin: 2rem;
 }
 
@@ -43,6 +128,7 @@ body {
 .prompt {
     height: 3rem;
     font-size: 2rem;
+    text-shadow: 0 0 4px white;
 }
 
 #city-input {
@@ -52,6 +138,10 @@ body {
     border-radius: 2rem;
     border: none;
     font-size: 1.5rem;
+}
+
+#city-input, .location-content, .weather-content {
+    box-shadow: 2px 2px 4px black;
 }
 
 .submit {
@@ -67,4 +157,18 @@ body {
     height: 1.5rem;
     width: 1.5rem;
     
+}
+
+.weather-content {
+    font-size: 1.5rem;
+    font-weight: 600;
+    min-height: 4rem;
+    align-items: center;
+}
+
+.error-prompt {
+    color: red;
+    font-size: 1rem;
+    font-weight: 900;
+    text-shadow: 0 0 2px white;
 }
