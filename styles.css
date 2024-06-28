@@ -19,29 +19,49 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 
+.title {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+    text-align: center;
+}
+
+.title > h1 {
+    font-size: 2rem;
+    font-weight: 900;
+}
+
+.title > h2 {
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+
 #main {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-image: url("./img/steve-johnson-y3Ne7MbdQ1E-unsplash.jpg");
+    background-image: url("./img/ryan-cheng-uqYy29Sfb8Q-unsplash-min.jpg");
     background-position: center;
     background-size: cover;
 }
 
 #main.sunny {
-    background-image: url("./img/mick-haupt-OVX3oiL5PsE-unsplash.jpg")
+    background-image: url("./img/mick-haupt-OVX3oiL5PsE-unsplash-min.jpg")
 }
 
 #main.clear {
-    background-image: url("./img/mmmg123456-qxT5_usxqsE-unsplash.jpg")
+    background-image: url("./img/mmmg123456-qxT5_usxqsE-unsplash (1).jpg")
 }
 
 #main.rain {
-    background-image: url("./img/nick-scheerbart-soGoAfesWO8-unsplash.jpg")
+    background-image: url("./img/nick-scheerbart-soGoAfesWO8-unsplash (1).jpg")
 }
 #main.cloud {
-    background-image: url("./img/nathan-anderson-f19Pxh_96CA-unsplash.jpg")
+    background-image: url("./img/nathan-anderson-f19Pxh_96CA-unsplash-min.jpg")
 }
 
 .content {
@@ -105,7 +125,7 @@ time, mark, audio, video {
     position: relative;
     width: clamp(300px, 75vw, 90vw);
     height: 5.5rem;
-    margin: 2rem;
+    margin: 1rem 2rem;
 }
 
 .input {
