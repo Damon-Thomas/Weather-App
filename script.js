@@ -1,6 +1,4 @@
 const main = document.querySelector("#main");
-const loader = document.getElementById('loader')
-console.log(loader)
 const content = document.querySelector(".content")
 const input = document.getElementById("city-input");
 const submit = document.querySelector(".submit");
@@ -38,7 +36,7 @@ async function getWeatherData(location) {
     prompt.textContent = ''
   } catch(err) {
     prompt.textContent = 'invalid input try again'
-    console.log(err)
+    
   }
 }
 
@@ -53,7 +51,7 @@ function dataProcessor(rawData) {
     tempF: rawData.current.temp_f,
     humidity: rawData.current.humidity,
   };
-  console.log(weatherObject.current);
+  
   main.className = "";
   if (weatherObject.current.includes("lear")) {
     main.classList.add("clear");
@@ -69,7 +67,7 @@ function dataProcessor(rawData) {
   }
   content.style.visibility = 'visible'
 
-  console.log(weatherObject.tempC);
+  
   return weatherObject;
 }
 

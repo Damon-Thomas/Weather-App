@@ -19,15 +19,6 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 
-#loader {
-    display: none;
-    background-color: cadetblue;
-    opacity: .9;
-    /* z-index: 99; */
-
-}
-
-
 #main {
     min-height: 100vh;
     display: flex;
