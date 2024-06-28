@@ -20,7 +20,7 @@ submit.addEventListener("click", function (e) {
 async function getWeatherData(location) {
   try {
     const weather = await fetch(
-      `http://api.weatherapi.com/v1/current.json?key=973bf25b6ed14106835134638242606&q=${location}&aqi=no`,
+      `https://api.weatherapi.com/v1/current.json?key=973bf25b6ed14106835134638242606&q=${location}&aqi=no`,
       { mode: "cors" }
     );
     const rawData = await weather.json();
@@ -35,6 +35,7 @@ async function getWeatherData(location) {
     humidityProcessor(weatherObj);
     prompt.textContent = ''
   } catch(err) {
+
     prompt.textContent = 'invalid input try again'
     
   }
